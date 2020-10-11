@@ -3,10 +3,10 @@ this is a momentum clone but for Christians
 
 ##Current Schedule:
 
-Week 1: 
+Week 1: (current week)
 - Read through medium article for Chrome Extension. 
 - Get HTML and CSS portion done and basic design 
-- Have API for Unsplash and OpenWeatherMap, and Scripture API implemented 
+- Have API for Unsplash and OpenWeatherMap, and Scripture API implemented (https://odb.org/2020/10/05/begin-with-the-end)
 
 Week 2-3:
 - Create a MongoDB database that stores the links to specific unsplash photos (id,type,user,link)
@@ -19,4 +19,6 @@ Week 4:
 - Create README.md
 - Deploy on Heroku
 - Hopefully be able to deploy in on Chrome Store? (idk how that works yet)
+
+
 
