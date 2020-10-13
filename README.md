@@ -21,4 +21,5 @@ Week 4:
 - Hopefully be able to deploy in on Chrome Store? (idk how that works yet)
 
 
-
+##Notes:
+- Add a date on the Left side of the photo

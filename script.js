@@ -4,8 +4,8 @@ function setCurrentTime() {
   $(".time").html(now.getHours() + ":" + now.getMinutes());
   $(".date").html(
     now.toLocaleDateString("en-US", {
-      weekday: "short",
-      year: "numeric",
+      weekday: "long",
+      year:"numeric",
       month: "short",
       day: "numeric",
     })
@@ -35,10 +35,20 @@ function getCookie(cname) {
   return "";
 }
 
-function clearCookie(){
-    alert("hello");
-    // document.cookie = "username=Adams Liu; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+function getWeather(settings){
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
+
 }
+
+$(function() {
+  $("#clearName").click(function(){
+    
+    document.cookie = "username=Adams; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  }); 
+});
+
 
 // Main Function
 
@@ -46,6 +56,15 @@ $(document).ready(function () {
   setCurrentTime();
   setInterval(function () {
     setCurrentTime();
+  }, 10 * 1000);
+
+  setInterval(function () {
+    var settings = {
+      "url": "metaweather.com/api/location/4118/",
+      "method": "GET",
+      "timeout": 0,
+    };
+    getWeather(settings);
   }, 10 * 1000);
 
   var username = getCookie("username");
@@ -73,3 +92,4 @@ $(document).ready(function () {
     }
   });
 });
+

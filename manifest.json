@@ -2,7 +2,7 @@
 {
     "name": "imago_dei",
     "version": "1.0",
-    "permissions": ["storage"],
+    "permissions": ["storage","https://www.metaweather.com/api/location/4118/"],
     "chrome_url_overrides" : {
        "newtab": "index.html"
      },
